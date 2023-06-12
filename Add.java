@@ -1,18 +1,11 @@
-import java.util.Scanner
 class Add{
-public static void main(String args[])
+public static void main(String abc[])
 {
-int max,min;
-Scanner sc=new Scanner(System.in);
-int a=sc.nextInt();
-int b=sc.nextInt();
-if(a<b)
+int sum=0;
+for( String i:abc)
 {
-System.out.println("The maximum Value is "+b+"The minimum value is "+a);
+sum=sum+Integer.parseInt(i);
 }
-else{
-
-System.out.println("The minimum Value is "+b+"The maxmimum value is "+a);
-}
+System.out.println(sum);
 }
 }
