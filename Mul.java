@@ -1,11 +1,9 @@
-class Str1{
+class Mul{
 public static void main(String args[])
 {
-
 try {
-String s=null;
-System.out.println(s.length());
-
+int a[] =new int[5];
+a[5]=30/0;
 }
 catch(ArithmeticException e)
 {

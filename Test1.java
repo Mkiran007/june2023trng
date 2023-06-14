@@ -1,20 +1,23 @@
-import java.util.Scanner;
-class Polmorphism{
-void print(){
-System.out.println("WELCOME");
+class Child extends Thread{
+public void run(){
+for(int i=1;i<=4;i++)
+{
+try{
+Thread.sleep(500);
 }
-void print( String s){
-System.out.println("WELCOME"+s);
+catch(Exception e){
+System.out.println(e);
+}
+System.out.println("child thread execution-"+i);
+}
 }
 }
 class Test1{
-public static void main(String[] Args)
+public static void main(String args[])throws Exception
 {
-Polmorphism obj=new Polmorphism();
-obj.print();
-Scanner sc=new Scanner(System.in);
-System.out.println("Enter your name");
-String n=sc.next();
-obj.print( n);
+Child t1=new Child();
+t1.start();
+t1.join();
+System.out.println("main thread completed");
 }
 }
